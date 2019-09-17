@@ -45,4 +45,5 @@ committers:
       timezone: 'America/New_York'
     - <<: *ric-app-kpimon_ptl
 tsc:
+    # yamllint disable-line rule:line-length
     approval: 'https://wiki.o-ran-sc.org/display/TOC#O-RANSCTechnicalOversightCommittee(TOC)-20190911'
