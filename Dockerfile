@@ -1,7 +1,7 @@
 ARG STAGE_DIR=/tmp/kpi-xapp
 
 #==================================================================================
-FROM nexus3.o-ran-sc.org:10004/bldr-ubuntu16-c-go:1-u16.04-nng1.1.1 as ricbuild
+FROM nexus3.o-ran-sc.org:10001/ubuntu:16.04 as ricbuild
 
 # to override repo base, pass in repo argument when running docker build:
 # docker build --build-arg REPOBASE=http://abc.def.org . ....

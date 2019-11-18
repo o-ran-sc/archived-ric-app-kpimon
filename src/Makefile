@@ -66,4 +66,5 @@ install: kpi-xapp
 	install  -D kpi-xapp  /usr/local/bin/kpi-xapp
 
 clean:
-	-rm *.o $(E2AP_c)/*.o $(SUBSCR)/*.o $(E2SM)/*.o $(KPI_HANDLER)/*.o $(KPI_MONITOR)/*.o kpi-xapp
+	-rm *.o $(ASN1C_DEFS)/*.o $(E2AP_c)/*.o $(SUBSCR)/*.o $(E2SM)/*.o $(KPI_HANDLER)/*.o $(KPI_MONITOR)/*.o kpi-xapp
+
