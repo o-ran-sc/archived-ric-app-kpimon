@@ -1,7 +1,9 @@
 ARG STAGE_DIR=/tmp/kpi-xapp
 
 #==================================================================================
-FROM nexus3.o-ran-sc.org:10001/ubuntu:16.04 as ricbuild
+#FROM nexus3.o-ran-sc.org:10001/ubuntu:16.04 as ricbuild
+FROM nexus3.o-ran-sc.org:10004/bldr-ubuntu16-c-go:2-u16.04-nng as ricbuild
+
 
 # to override repo base, pass in repo argument when running docker build:
 # docker build --build-arg REPOBASE=http://abc.def.org . ....
@@ -43,37 +45,38 @@ RUN dpkg -i rmr_${RMR_VER}_amd64.deb
 RUN dpkg -i rmr-dev_${RMR_VER}_amd64.deb
 
 # Install Hiredis Library
-RUN cd /tmp/
-RUN git clone https://github.com/redis/hiredis.git
-RUN cd hiredis
-RUN make all
+RUN cd /tmp/ && \
+    git clone https://github.com/redis/hiredis.git && \
+    cd hiredis && \
+    make all install
 
 ##-----------------------------------
 # Now install the program
 #------------------------------------
 COPY ./ ${STAGE_DIR}
-RUN export CPATH=$CPATH:/usr/local/include && \ 
+RUN export CPATH=$CPATH:/usr/local/include && \
     cd src && \
     make clean && \
-    make install 
+    make install
 
 #---------------------------------------------
 # Build the final version
 #FROM nexus3.o-ran-sc.org:10004/bldr-ubuntu16-c-go:1-u16.04-nng1.1.1
 
 FROM ubuntu:16.04
+#FROM nexus3.o-ran-sc.org:10004/bldr-ubuntu16-c-go:2-u16.04-nng
 
 ARG STAGE_DIR
 
 # copy just the needed libraries install it into the final image
-RUN cd ${STAGE_DIR}/src
+RUN mkdir -p ${STAGE_DIR}/src && cd ${STAGE_DIR}/src
 COPY --from=ricbuild ${STAGE_DIR}/*.deb /tmp/
 COPY --from=ricbuild /usr/local/lib/libnng* /usr/local/lib/
 RUN dpkg -i /tmp/*.deb
 RUN apt-get update && \
     apt-get install -y libcurl3 && \
     apt-get clean
-COPY --from=ricbuild /etc/xapp/* /etc/xapp/
+#COPY --from=ricbuild /etc/xapp/* /etc/xapp/
 COPY --from=ricbuild /usr/local/bin/kpi-xapp /usr/local/bin/kpi-xapp
 #COPY --from=ricbuild /usr/local/bin/e2e-test-client /usr/local/bin/e2e-test-client
 #COPY --from=ricbuild /usr/local/bin/mock-e2term-server /usr/local/bin/mock-e2term-server
@@ -93,3 +96,4 @@ ARG gNodeB=NYC123,ABC345,CDR331
 ARG THREADS=1
 
 CMD ./kpi-xapp -g $gNodeB -t $THREADS
+
