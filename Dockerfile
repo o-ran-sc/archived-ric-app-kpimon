@@ -11,22 +11,22 @@ ARG STAGE_DIR
 # Install necessary packages
 WORKDIR ${STAGE_DIR}
 RUN apt-get update  \
-     && apt-get install -y \
-     libcurl4-openssl-dev \
-     libcurl3 \
-     cmake \
-     git \
-     build-essential \
-     automake \
-     autoconf-archive \
-     autoconf \
-     pkg-config \
-     gawk \
-     libtool \
-     wget \
-     zlib1g-dev \
-     libffi-dev \
-     && apt-get clean
+      && apt-get install -y \
+      libcurl4-openssl-dev \
+      libcurl3 \
+      cmake \
+      git \
+      build-essential \
+      automake \
+      autoconf-archive \
+      autoconf \
+      pkg-config \
+      gawk \
+      libtool \
+      wget \
+      zlib1g-dev \
+      libffi-dev \
+      && apt-get clean
 
 # Install mdclog using debian package hosted at packagecloud.io
 ARG MDC_VER=0.0.3-1
@@ -41,6 +41,12 @@ RUN wget -nv --content-disposition https://packagecloud.io/o-ran-sc/staging/pack
 RUN wget -nv --content-disposition https://packagecloud.io/o-ran-sc/staging/packages/debian/stretch/rmr-dev_${RMR_VER}_amd64.deb/download.deb
 RUN dpkg -i rmr_${RMR_VER}_amd64.deb
 RUN dpkg -i rmr-dev_${RMR_VER}_amd64.deb
+
+# Install Hiredis Library
+RUN cd /tmp/
+RUN git clone https://github.com/redis/hiredis.git
+RUN cd hiredis
+RUN make all
 
 ##-----------------------------------
 # Now install the program
@@ -58,12 +64,6 @@ RUN export CPATH=$CPATH:/usr/local/include && \
 FROM ubuntu:16.04
 
 ARG STAGE_DIR
-
-# Install Hiredis Library
-RUN cd /tmp/
-RUN git clone https://github.com/redis/hiredis.git
-RUN cd hiredis
-RUN make all
 
 # copy just the needed libraries install it into the final image
 RUN cd ${STAGE_DIR}/src
