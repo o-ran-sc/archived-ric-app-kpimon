@@ -20,6 +20,9 @@ Please find some guidance here on the content of O-RAN SC documentation.
    :maxdepth: 2
    :caption: Contents:
 
+   architecture/architecture.rst
+   license.rst
+   amber.rst
    overview.rst
    release-notes.rst
 
