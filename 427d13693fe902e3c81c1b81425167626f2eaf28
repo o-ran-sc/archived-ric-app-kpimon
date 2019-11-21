@@ -1,0 +1,8 @@
+Verified+1: ORAN Jobbuilder <releng+oran-jobbuilder@linuxfoundation.org>
+Code-Review+1: weichen ni <niweichen@chinamobile.com>
+Code-Review+2: Jeongyeob Oak <jy.oak@samsung.com>
+Submitted-by: Jeongyeob Oak <jy.oak@samsung.com>
+Submitted-at: Thu, 21 Nov 2019 09:54:13 +0000
+Reviewed-on: https://gerrit.o-ran-sc.org/r/c/ric-app/kpimon/+/1714
+Project: ric-app/kpimon
+Branch: refs/heads/master
