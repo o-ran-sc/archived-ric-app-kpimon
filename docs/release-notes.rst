@@ -1,6 +1,6 @@
 .. This work is licensed under a Creative Commons Attribution 4.0 International License.
 .. SPDX-License-Identifier: CC-BY-4.0
-.. Copyright (C) 2019 YOUR-ORGANIZATION-NAME
+.. Copyright (C) 2019 SAMSUNG
 
 
 Release Notes
@@ -21,13 +21,7 @@ Version history
 | **Date**           | **Ver.**           | **Author**         | **Comment**        |
 |                    |                    |                    |                    |
 +--------------------+--------------------+--------------------+--------------------+
-| 20XX-XX-XX         | 0.1.0              |                    | First draft        |
-|                    |                    |                    |                    |
-+--------------------+--------------------+--------------------+--------------------+
-|                    | 0.1.1              |                    |                    |
-|                    |                    |                    |                    |
-+--------------------+--------------------+--------------------+--------------------+
-|                    | 1.0                |                    |                    |
+| 2019-11-20         | 1.0.0              | Md Waseem Ahamed   | First draft        |
 |                    |                    |                    |                    |
 +--------------------+--------------------+--------------------+--------------------+
 
@@ -35,90 +29,30 @@ Version history
 Summary
 -------
 
-<SUMMARIZE THE RELEASE - THE CONTENT - AND OTHER IMPORTANT HIGH LEVEL PROPERTIES>
-
-
+The Amber release of the KPI Mon xAPP supports full closed loop control 
+for CuCpResourceStatusReport from multiple gNBs 
+and stores the metrics in Redis DB.
 
 
 Release Data
 ------------
-<STATE RELEVANT RELEASE DATA/RECORDS>
-
-<EXAMPLE>:
 
 +--------------------------------------+--------------------------------------+
-| **Project**                          | E.g. project  		              |
+| **Project**                          | RAN Intelligent Controller           |
 |                                      |                                      |
 +--------------------------------------+--------------------------------------+
-| **Repo/commit-ID**                   | E.g. genesis/adf634a0d4.....         |
+| **Repo/commit-ID**                   |          ric-app/kpimon              |
 |                                      |                                      |
 +--------------------------------------+--------------------------------------+
-| **Release designation**              | E.g. Arno RC2                        |
+| **Release designation**              |                Amber                 |
 |                                      |                                      |
 +--------------------------------------+--------------------------------------+
-| **Release date**                     | E.g. 2015-04-16                      |
+| **Release date**                     |      2019-11-20                      |
 |                                      |                                      |
 +--------------------------------------+--------------------------------------+
-| **Purpose of the delivery**          | 	 		     	      |
+| **Purpose of the delivery**          | open-source xAPP for KPI Monitorin   |
 |                                      |                                      |
 +--------------------------------------+--------------------------------------+
-
-
-
-
-Feature Additions
-^^^^^^^^^^^^^^^^^
-<STATE ADDED FEATURES BY REFERENCE TO JIRA>
-
-<EXAMPLE>:
-
-**JIRA BACK-LOG:**
-
-+--------------------------------------+--------------------------------------+
-| **JIRA REFERENCE**                   | **SLOGAN**                           |
-|                                      |                                      |
-+--------------------------------------+--------------------------------------+
-| 		                       | 				      |
-|                                      | 				      |
-|                                      |                                      |
-+--------------------------------------+--------------------------------------+
-| 	                               |  				      |
-|                                      |  				      |
-|                                      |                                      |
-+--------------------------------------+--------------------------------------+
-
-Bug Corrections
-^^^^^^^^^^^^^^^
-
-**JIRA TICKETS:**
-
-+--------------------------------------+--------------------------------------+
-| **JIRA REFERENCE**                   | **SLOGAN**                           |
-|                                      |                                      |
-+--------------------------------------+--------------------------------------+
-| 		                       | 				      |
-|                                      | 				      |
-|                                      |                                      |
-+--------------------------------------+--------------------------------------+
-| 	                               |  				      |
-|                                      |  				      |
-|                                      |                                      |
-+--------------------------------------+--------------------------------------+
-
-Deliverables
-^^^^^^^^^^^^
-
-Software Deliverables
-+++++++++++++++++++++
-
-<STATE WHAT SOFTWARE DELIVERABLES THAT ARE RELATED TO THIS VERSION, AND WHERE THOSE CAN BE RETRIEVED>
-
-
-
-Documentation Deliverables
-++++++++++++++++++++++++++
-
-<STATE WHAT DOCUMENTATION DELIVERABLES THAT ARE RELATED TO THIS VERSION, AND WHERE THOSE CAN BE RETRIEVED>
 
 
 
@@ -128,43 +62,8 @@ Known Limitations, Issues and Workarounds
 
 System Limitations
 ^^^^^^^^^^^^^^^^^^
-<STATE ALL RELEVANT SYSTEM LIMITATIONS, IF THERE IS ANY>
 
-
-
-Known Issues
-^^^^^^^^^^^^
-<STATE ALL KNOWN ISSUES WITH JIRA REFERENCE>
-
-<EXAMPLE>:
-
-**JIRA TICKETS:**
-
-+--------------------------------------+--------------------------------------+
-| **JIRA REFERENCE**                   | **SLOGAN**                           |
-|                                      |                                      |
-+--------------------------------------+--------------------------------------+
-| 		                       | 				      |
-|                                      | 				      |
-|                                      |                                      |
-+--------------------------------------+--------------------------------------+
-| 	                               |  				      |
-|                                      |  				      |
-|                                      |                                      |
-+--------------------------------------+--------------------------------------+
-
-Workarounds
-^^^^^^^^^^^
-
-<STATE ALL KNOWN WORKAROUNDS TO THE ISSUES STATED ABOVE, IF THERE IS ANY>
-
-
-
-
-References
-----------
-<STATE RELEVANT REFERENCES FOR THIS RELEASE/VERSION>
-
-
-
+- The xAPP currently does not support A1 Interface, so policy updates is not implemented in the xAPP. All the GNB to be subscribed needs to be specified initially.
+- The xAPP currently only supports messages from CU.
+- The subscription request parameters (RAN Function ID etc) cannot be changed.
 
