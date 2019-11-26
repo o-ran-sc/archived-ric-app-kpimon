@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d23d862b_281f109a",
+        "filename": "releases/container-release.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000001
+      },
+      "writtenOn": "2019-11-26T16:17:39Z",
+      "side": 1,
+      "message": "remove trailing whitespace",
+      "revId": "9890385702981caeb9a04e43997e7203cb848788",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a9c14d11_7f0c184e",
+        "filename": "releases/container-release.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000001
+      },
+      "writtenOn": "2019-11-26T16:17:39Z",
+      "side": 1,
+      "message": "change this to your repo",
+      "revId": "9890385702981caeb9a04e43997e7203cb848788",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "cbd451f7_e18653f7",
+        "filename": "releases/container-release.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000001
+      },
+      "writtenOn": "2019-11-26T16:17:39Z",
+      "side": 1,
+      "message": "you want to release the docker container built from your repo, not from it/otf repo.",
+      "revId": "9890385702981caeb9a04e43997e7203cb848788",
+      "serverId": "84e4e190-e623-4c37-9eda-58b1937c1b53",
+      "unresolved": true
+    }
+  ]
+}
