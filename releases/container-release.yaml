@@ -1,0 +1,9 @@
+distribution_type: container
+container_release_tag: 0.0.1 
+container_pull_registry: nexus3.o-ran-sc.org:10004
+container_push_registry: nexus3.o-ran-sc.org:10002
+project: it/otf
+ref: 6aa622c47a03c12a788f3ae6131f3653a949c6522cb587b5765ee760ee423e6c
+containers:
+    - name: it-otf-ric-app-kpimon
+      version: 0.0.1
