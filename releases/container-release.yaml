@@ -1,0 +1,10 @@
+---
+distribution_type: container
+container_release_tag: 0.0.1
+container_pull_registry: nexus3.o-ran-sc.org:10004
+container_push_registry: nexus3.o-ran-sc.org:10002
+project: ric-app/kpimon
+ref: b61b9bd0c4fb7fb20dcfa0a94ff1ee4c9f15bc48
+containers:
+    - name: ric-app-kpimon
+      version: 0.0.1
