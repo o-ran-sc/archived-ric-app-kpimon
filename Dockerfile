@@ -2,7 +2,7 @@ ARG STAGE_DIR=/tmp/kpi-xapp
 
 #==================================================================================
 #FROM nexus3.o-ran-sc.org:10001/ubuntu:16.04 as ricbuild
-FROM nexus3.o-ran-sc.org:10004/bldr-ubuntu16-c-go:2-u16.04-nng as ricbuild
+FROM nexus3.o-ran-sc.org:10004/bldr-ubuntu16-c-go:3-u16.04-nng as ricbuild
 
 
 # to override repo base, pass in repo argument when running docker build:
@@ -31,16 +31,16 @@ RUN apt-get update  \
       && apt-get clean
 
 # Install mdclog using debian package hosted at packagecloud.io
-ARG MDC_VER=0.0.3-1
-RUN wget -nv --content-disposition https://packagecloud.io/o-ran-sc/master/packages/debian/stretch/mdclog_${MDC_VER}_amd64.deb/download.deb
-RUN wget -nv --content-disposition https://packagecloud.io/o-ran-sc/master/packages/debian/stretch/mdclog-dev_${MDC_VER}_amd64.deb/download.deb
+ARG MDC_VER=0.0.4-1
+RUN wget --content-disposition https://packagecloud.io/o-ran-sc/release/packages/debian/stretch/mdclog_${MDC_VER}_amd64.deb/download.deb
+RUN wget --content-disposition https://packagecloud.io/o-ran-sc/release/packages/debian/stretch/mdclog-dev_${MDC_VER}_amd64.deb/download.deb
 RUN dpkg -i mdclog_${MDC_VER}_amd64.deb
 RUN dpkg -i mdclog-dev_${MDC_VER}_amd64.deb
 
 # Install RMR using debian package hosted at packagecloud.io
-ARG RMR_VER=1.3.0
-RUN wget -nv --content-disposition https://packagecloud.io/o-ran-sc/staging/packages/debian/stretch/rmr_${RMR_VER}_amd64.deb/download.deb
-RUN wget -nv --content-disposition https://packagecloud.io/o-ran-sc/staging/packages/debian/stretch/rmr-dev_${RMR_VER}_amd64.deb/download.deb
+ARG RMR_VER=1.11.2
+RUN wget --content-disposition https://packagecloud.io/o-ran-sc/release/packages/debian/stretch/rmr_${RMR_VER}_amd64.deb/download.deb
+RUN wget --content-disposition https://packagecloud.io/o-ran-sc/release/packages/debian/stretch/rmr-dev_${RMR_VER}_amd64.deb/download.deb
 RUN dpkg -i rmr_${RMR_VER}_amd64.deb
 RUN dpkg -i rmr-dev_${RMR_VER}_amd64.deb
 
