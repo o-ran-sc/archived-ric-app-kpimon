@@ -43,6 +43,11 @@ committers:
       id: 'junny'
       company: 'Samsung'
       timezone: 'America/New_York'
+    - name: 'Jinwei.fan'
+      email: 'jinwei.fan@samsung.com'
+      id: 'jinwei.fan'
+      company: 'Samsung'
+      timezone: 'America/New_York'
     - <<: *ric-app-kpimon_ptl
 tsc:
     # yamllint disable-line rule:line-length
