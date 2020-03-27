@@ -43,7 +43,15 @@ committers:
       id: 'junny'
       company: 'Samsung'
       timezone: 'America/New_York'
-    - <<: *ric-app-kpimon_ptl
+    - name: ‘Jinwei Fan'
+      email: 'jinwei.fan@samsung.com'
+      company: ’Samsung'
+      id: ‘jinwei.fan'
+      timezone: 'Unknown/Unknown'
 tsc:
-    # yamllint disable-line rule:line-length
-    approval: 'https://wiki.o-ran-sc.org/display/TOC#O-RANSCTechnicalOversightCommittee(TOC)-20190911'
+    # yamllint disable rule:line-length
+    approval: 'https://lists.o-ran-sc.org/g/main/topic/new_practice_revised/72059058?p=,,,20,0,0,0::recentpostdate%2Fsticky,,,20,2,0,72059058'
+    changes:
+    - type: 'Promotion'
+      name: ‘Jinwei Fan'
+      link: ‘https://lists.o-ran-sc.org/g/main/topic/new_practice_revised/72059058?p=,,,20,0,0,0::recentpostdate%2Fsticky,,,20,2,0,72059058'
