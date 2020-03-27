@@ -3,13 +3,18 @@ project: 'kpimon xApp'
 project_creation_date: '2019-09-17'
 project_category: ''
 lifecycle_state: 'Incubation'
-project_lead: &ric-app-kpimon_ptl
-    name: ''
-    email: ''
-    id: ''
-    company: ''
-    timezone: ''
-primary_contact: *rip-app-kpimon_ptl
+project_lead:
+    name: 'Jeongyeob Oak'
+    email: 'jy.oak@samsung.com'
+    id: 'jyoak'
+    company: 'Samsung'
+    timezone: 'America/New_York'
+primary_contact:
+    name: 'Jeongyeob Oak'
+    email: 'jy.oak@samsung.com'
+    id: 'jyoak'
+    company: 'Samsung'
+    timezone: 'America/New_York'
 issue_tracking:
     type: 'jira'
     url: 'https://jira.o-ran-sc.org/'
@@ -43,7 +48,11 @@ committers:
       id: 'junny'
       company: 'Samsung'
       timezone: 'America/New_York'
-    - <<: *ric-app-kpimon_ptl
+    - name: 'Jinwei.fan'
+      email: 'jinwei.fan@samsung.com'
+      id: 'jinwei.fan'
+      company: 'Samsung'
+      timezone: 'America/New_York'
 tsc:
-    # yamllint disable-line rule:line-length
-    approval: 'https://wiki.o-ran-sc.org/display/TOC#O-RANSCTechnicalOversightCommittee(TOC)-20190911'
+    # yamllint disable rule:line-length
+    approval: 'https://lists.o-ran-sc.org/g/main/topic/new_practice_revised/72059058?p=,,,20,0,0,0::recentpostdate%2Fsticky,,,20,2,0,72059058'
