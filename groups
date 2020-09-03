@@ -1,4 +1,5 @@
 # UUID                                                                         	Group Name
 #
+22a04ace67edc6df18015baf82a54ea415cdf110                                       	saml/oran-gerrit-ric-app-kpimon-committers
 add1d629e64dce7097223c93ca6e710c1460b5ba                                       	GitHub Replication
 ldap:cn=oran-gerrit-ric-app-kpimon-committers,ou=Groups,dc=freestandards,dc=org	ldap/oran-gerrit-ric-app-kpimon-committers
